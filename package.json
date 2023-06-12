@@ -1,0 +1,51 @@
+{
+  "name": "prisma-session-store-dist",
+  "description": "Prisma express-session store",
+  "keywords": [
+    "Prisma",
+    "Express",
+    "Session",
+    "Memory",
+    "Store",
+    "TypeScript",
+    "PASETO",
+    "JWT"
+  ],
+  "version": "3.1.12",
+  "license": "MIT",
+  "author": "Krispin Leydon",
+  "contributors": [
+    "wSedlacek"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kleydon/prisma-session-store.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kleydon/prisma-session-store/issues"
+  },
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+  },
+  "engines": {
+    "node": ">=12.0"
+  },
+  "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.0",
+    "lodash": "^4.17.21",
+    "ts-dedent": "^2.2.0",
+    "type-fest": "^2.5.2"
+  },
+  "peerDependencies": {
+    "@prisma/client": ">=2.16.1",
+    "express-session": ">=1.17.1"
+  },
+  "devDependencies": {
+  }
+}
