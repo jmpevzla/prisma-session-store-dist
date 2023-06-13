@@ -111,28 +111,10 @@ export interface IOptions<M extends string = 'session'> {
      */
     dbRecordIdFunction?(sessionID: string): string;
     /**
-     * Object String Path into data Session for extras in Session Table
-     * Example: 'passport.user'
+     * Function that allows adding extra fields to the session table,
+     * receives the session data object as a parameter and must return
+     * an object with each of the extra columns as a key whose
+     * value will be saved in the table.
      */
-    extrasPath?: string;
-    /**
-     * JavaScript type for each extra field
-     */
-    extrasType?: Record<string, 'bigint' | 'number' | 'string'>;
-    /**
-     * Object for map from Session Table columns [keys] to Session Object keys [values],
-     * searching from extrasPath option.
-     *
-     * Example for:
-     * - extrasPath: 'passport.user'
-     * - Session: {
-     *   passport: { user: "{\"id\": \"1\"}"}
-     * }
-     * - Session Table Extra column 'user_id'
-     *
-     * extras: {
-     *  user_id: 'id'
-     * }
-     */
-    extras?: Record<string, unknown>;
+    extrasFunc?(session: Record<string, any>): Record<string, string | bigint | number>;
 }
